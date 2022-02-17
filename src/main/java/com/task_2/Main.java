@@ -20,7 +20,7 @@ public class Main {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
-        System.out.println("Welcome to my dumb application");
+        System.out.println("Welcome to MyRating application");
         System.out.println("1.Takeaway\n2.Restaurants\n");
         Scanner input = new Scanner(System.in);
         int option = input.nextInt();
@@ -28,11 +28,7 @@ public class Main {
             case 1:
                 try{
                     transaction.begin();
-                    Takeaway atakeaway= new Takeaway();
-                    atakeaway.setName("Test1 takeaway");
-                    atakeaway.setRating(4);
-                    atakeaway.setUserId(1);
-                    entityManager.persist(atakeaway);
+
                     transaction.commit();
                 }
                 finally {

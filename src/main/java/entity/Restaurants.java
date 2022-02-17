@@ -19,7 +19,6 @@ public class Restaurants {
     private int userId;
 
 
-
     public int getrId() {
         return rId;
     }
